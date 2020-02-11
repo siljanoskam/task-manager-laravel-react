@@ -34,7 +34,8 @@ class Tasks extends Repository
             $task = Task::create([
                 'title' => $data['title'],
                 'description' => $data['description'],
-                'date' => $data['date']
+                'date' => $data['date'],
+                'user_id' => $data['user_id']
             ]);
             $singleItem = new TaskResource($task);
         } catch (\Exception $e) {
@@ -81,7 +82,8 @@ class Tasks extends Repository
                     ->getItems();
             $task->title = $data['title'];
             $task->description = $data['description'];
-            $task->date = bcrypt($data['date']);
+            $task->date = $data['date'];
+            $task->user_id = $data['user_id'];
             $task->save();
 
             $singleItem = new TaskResource($task);
