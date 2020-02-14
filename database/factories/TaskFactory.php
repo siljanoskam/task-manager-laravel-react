@@ -22,6 +22,7 @@ $factory->define(Task::class, function (Faker $faker) {
         'title' => $faker->word,
         'description' => $faker->text,
         'date' => $faker->dateTimeThisDecade,
+        'status' => $faker->randomElement([true, false]),
         'user_id' => User::all()->random()->id
     ];
 });

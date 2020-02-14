@@ -20,6 +20,7 @@ class CreateTasksTable extends Migration
             $table
                 ->dateTime('date')
                 ->nullable();
+            $table->boolean('status');
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 
