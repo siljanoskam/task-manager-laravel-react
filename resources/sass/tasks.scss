@@ -1,0 +1,22 @@
+li.task {
+  cursor: pointer;
+
+  &.strikethrough {
+    text-decoration: line-through;
+  }
+}
+
+.no-tasks-wrapper,
+.single-task-wrapper {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+.no-tasks-wrapper {
+  color: #8b0000;
+}
+
+.single-task-wrapper {
+  color: #000000;
+}
