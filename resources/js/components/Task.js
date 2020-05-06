@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
 const Task = ({task}) => {
-  debugger;
   if (!task) {
     return (
       <div className="single-task-wrapper">
